@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continental OS - Secure Terminal</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="terminal-prompt">
+      <p>> LOAD_DOSSIER(AGENT_ALI)</p>
+      <span class="cursor">_</span>
+      <small>Press [ENTER] to execute</small>
+    </div>
+
+    <audio
+      id="keyboard-sound"
+      src="typewriter-typing-68696.mp3"
+      preload="auto"
+    ></audio>
+
+    <div class="continental-dossier hidden">
+      <header>
+        <h1>📜Le Grand Livre du Continental</h1>
+      </header>
+      <div class="agent-info">
+        <h2>Agent : Ali</h2>
+        <ul>
+          <li><strong>Identité :</strong> Confirmée</li>
+          <li class="status">
+            <strong>Statut :</strong>
+            <span class="revoked">Excommunicado - REVOKED</span>
+          </li>
+          <li><strong>Accès au Continental :</strong> Révoqué</li>
+          <li><strong>Open Contract Value :</strong> 0</li>
+          <li><strong>Markers to Honor :</strong> 0</li>
+          <li><strong>Balance in Gold Coins :</strong> 0</li>
+          <li><strong>Safehouses :</strong> Aucun actif</li>
+          <li><strong>Alliés :</strong> Dissous</li>
+          <li><strong>Arsenal :</strong> Confisqué</li>
+          <li><strong>Communication Lines :</strong> Coupées</li>
+        </ul>
+      </div>
+      <div class="high-council-message">
+        <h3>Message du Haut-Conseil :</h3>
+        <p>
+          "L’Agent Ali est désormais retiré des registres.<br />
+          Toute dette est effacée, tout contrat clos.<br />
+          Son nom est rayé, son passage au Continental prend fin."
+        </p>
+      </div>
+      <footer>
+        <p class="motto">
+          Dernière mention : <em>Si vis pacem, para bellum.</em>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
