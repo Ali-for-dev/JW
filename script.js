@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const keyboardSound = document.getElementById('keyboard-sound');
     const stampSound = document.getElementById('stamp-sound');
 
-    // Écouteur pour démarrer l'expérience
+    
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter' && !dossier.classList.contains('active')) {
             dossier.classList.add('active'); // Empêche de relancer
@@ -14,21 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     async function startSequence() {
-        // 1. Cache le prompt et affiche le conteneur du dossier
         terminalPrompt.style.display = 'none';
         dossier.classList.remove('hidden');
         dossier.style.opacity = '1';
 
-        // 2. Lance l'animation d'écriture
         await runTypingAnimation();
         
-        // 3. Attend un peu, puis lance l'animation du tampon
         setTimeout(() => {
             stamp.classList.remove('hidden');
             stamp.style.opacity = '1';
             stampSound.currentTime = 0;
             stampSound.play();
-        }, 1000); // Délai d'1 seconde après la fin de l'écriture
+        }, 1000); 
     }
 
     function runTypingAnimation() {
